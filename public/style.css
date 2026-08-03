@@ -1,0 +1,23 @@
+:root { color-scheme: light; font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif; color: #182032; background: #f4f7ff; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 15% 0%, #dce8ff, transparent 35rem), #f7f8fc; }
+.app { width: min(860px, calc(100% - 32px)); margin: 0 auto; padding: 58px 0 44px; }
+.hero { margin-bottom: 28px; }
+.eyebrow { color: #4f46e5; font-weight: 700; letter-spacing: .08em; margin: 0 0 8px; font-size: .8rem; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.5rem); margin: 0; letter-spacing: -.06em; }
+.hero > p:last-child { color: #647087; font-size: 1.05rem; }
+.panel { background: rgba(255,255,255,.9); border: 1px solid #e7e9f2; box-shadow: 0 12px 34px rgba(44,56,95,.08); border-radius: 18px; padding: 24px; margin: 18px 0; }
+.options { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+label { font-size: .9rem; font-weight: 650; display: grid; gap: 7px; }
+select, textarea { font: inherit; border: 1px solid #d7dceb; border-radius: 10px; padding: 12px; color: #182032; background: #fff; }
+textarea { resize: vertical; width: 100%; line-height: 1.55; }
+select:focus, textarea:focus { outline: 3px solid #d9dcff; border-color: #5751dc; }
+.task-label { margin-bottom: 7px; }
+.actions, .result-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; }
+button { cursor: pointer; font: inherit; font-weight: 700; border: 0; border-radius: 10px; padding: 11px 16px; background: #5149d8; color: white; }
+button:hover { background: #4139bd; } button:disabled { cursor: not-allowed; opacity: .5; }
+.sample, .copy { color: #5149d8; background: #ecebff; }.sample:hover, .copy:hover { background: #dedcff; }
+h2 { font-size: 1.1rem; margin: 0; }.hint { color: #758096; margin-top: 16px; }
+#result { white-space: pre-wrap; line-height: 1.7; margin-top: 16px; display: none; }
+.note { color: #758096; font-size: .84rem; text-align: center; margin-top: 22px; }
+@media (max-width: 560px) { .app { padding-top: 36px; }.panel { padding: 18px; }.options { grid-template-columns: 1fr; }.actions { align-items: stretch; flex-direction: column-reverse; }.actions button { width: 100%; } }

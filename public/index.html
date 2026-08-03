@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小帮手 AI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <p class="eyebrow">你的日常 AI 助手</p>
+        <h1>小帮手 AI</h1>
+        <p>写文案、整理内容、制定计划，告诉我你想完成什么。</p>
+      </section>
+
+      <section class="panel" aria-label="AI 请求">
+        <div class="options">
+          <label>任务类型
+            <select id="mode">
+              <option>通用助手</option><option>写作润色</option><option>总结整理</option><option>学习计划</option><option>代码解释</option>
+            </select>
+          </label>
+          <label>表达风格
+            <select id="tone">
+              <option>清晰友好</option><option>专业简洁</option><option>轻松有趣</option><option>详细教学</option>
+            </select>
+          </label>
+        </div>
+        <label class="task-label" for="task">你的需求</label>
+        <textarea id="task" rows="8" placeholder="例如：帮我写一段介绍我的手作咖啡店的朋友圈文案，要温暖、简短。"></textarea>
+        <div class="actions">
+          <button class="sample" data-text="请为一家手作咖啡店写 3 条温暖简短的朋友圈文案，每条不超过 50 字。">试试示例</button>
+          <button id="submit">开始生成</button>
+        </div>
+      </section>
+
+      <section class="panel result-panel" aria-live="polite">
+        <div class="result-heading"><h2>生成结果</h2><button id="copy" class="copy" disabled>复制</button></div>
+        <div id="status" class="hint">结果会显示在这里。</div>
+        <article id="result"></article>
+      </section>
+      <p class="note">你的 API Key 只保存在服务器环境变量中，不会显示在网页或上传到 GitHub。</p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
