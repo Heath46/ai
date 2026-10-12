@@ -1,0 +1,1 @@
+browser.runtime.onMessage.addListener(({type,fontSize,contrast})=>{if(type!=="set-accessibility")return;document.documentElement.style.fontSize=`${fontSize}%`;document.documentElement.classList.toggle("study-companion-contrast",contrast);});
